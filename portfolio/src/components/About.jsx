@@ -2,7 +2,7 @@ import about from "../assets/about.jpg";
 
 function About() {
   return (
-    <section className="about">
+    <section id="about" className="about">
       <div className="about-book">
 
         <div className="about-left">

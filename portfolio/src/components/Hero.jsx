@@ -2,7 +2,7 @@ import hero from "../assets/hero.jpg";
 
 function Hero() {
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="hero-content">
 
         <div className="hero-left">

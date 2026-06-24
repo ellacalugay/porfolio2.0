@@ -16,7 +16,7 @@ function Footer() {
         </div>
 
         <p>
-          © 2026 Ella Lauren C. Caluya.
+          © 2026 Ella Lureen C. Calugay
           Crafted with precision.
         </p>
 

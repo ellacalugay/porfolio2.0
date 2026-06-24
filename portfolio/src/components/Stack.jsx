@@ -1,21 +1,13 @@
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
   FaGithub,
   FaWordpress,
   FaFigma,
+  FaAdobe,
 } from "react-icons/fa";
 
 import {
-  SiTailwindcss,
-  SiPython,
-  SiPhp,
-  SiSupabase,
   SiVercel,
   SiNotion,
-  SiAdobe,
   SiShopify,
 } from "react-icons/si";
 
@@ -41,15 +33,13 @@ function Stack() {
     { icon: <FaGithub />, name: "GitHub" },
     { icon: <SiNotion />, name: "Notion" },
     { icon: <FaWordpress />, name: "WordPress" },
-    { icon: <SiAdobe />, name: "Adobe" },
+    { icon: <FaAdobe />, name: "Adobe" },
     { icon: <SiShopify />, name: "Shopify" },
   ];
 
   return (
     <section className="stack">
-
       <div className="container">
-
         <span className="badge">
           TECHNICAL STACK
         </span>
@@ -59,21 +49,18 @@ function Stack() {
         </h2>
 
         <div className="tech-box">
-
           {techs.map((tech) => (
             <div className="tech-pill" key={tech}>
               {tech}
             </div>
           ))}
-
         </div>
 
         <h3 className="tools-title">
-          Tools I use
+          Tools I Use
         </h3>
 
         <div className="tools-grid">
-
           {tools.map((tool, index) => (
             <div className="tool-card" key={index}>
               <div className="tool-icon">
@@ -83,11 +70,8 @@ function Stack() {
               <span>{tool.name}</span>
             </div>
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

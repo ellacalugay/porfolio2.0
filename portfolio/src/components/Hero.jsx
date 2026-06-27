@@ -1,4 +1,4 @@
-import hero from "../assets/hero.jpg";
+import pic from "../assets/pic.jpg";
 
 function Hero() {
   return (
@@ -12,7 +12,7 @@ function Hero() {
           </span>
 
           <h1>
-            SOFTWARE <br />
+            FRONT END <br />
             DEVELOPER <br />
             & UI DESIGNER
           </h1>
@@ -24,19 +24,23 @@ function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn pink-btn">
-              VIEW PROJECTS
-            </button>
+            <a href="#projects">
+              <button className="btn pink-btn">
+                VIEW PROJECTS
+              </button>
+            </a>
 
-            <button className="btn outline-btn">
-              CONTACT ME
-            </button>
+            <a href="#contact">
+              <button className="btn outline-btn">
+                CONTACT ME
+              </button>
+            </a>
           </div>
         </div>
 
         <div className="hero-right">
           <div className="hero-image">
-            <img src={hero} alt="" />
+            <img src={pic} alt="" />
           </div>
         </div>
 

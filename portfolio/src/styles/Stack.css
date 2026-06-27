@@ -1,0 +1,209 @@
+.stack-section {
+    background-color: #fcfaf7;
+    padding: 6rem 1rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.stack-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.stack-header {
+    margin-bottom: 3rem;
+}
+
+.stack-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #f472b6;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #f472b6;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+}
+
+.stack-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.stack-title .text-pink {
+    color: #f472b6;
+}
+
+.skills-blob {
+    position: relative;
+    background-color: #fce7f3;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    padding: 4rem;
+    margin: 4rem auto;
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.skills-inner {
+    border: 2px dashed #f472b6;
+    border-radius: 50px;
+    padding: 3rem;
+    height: 100%;
+}
+
+.skills-grid {
+    position: relative;
+    height: 300px; 
+}
+
+.skill-pill {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: 500;
+    color: #333;
+    font-size: 1rem;
+}
+
+.skill-pill:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    font-size: 1.5rem;
+}
+
+/* Positioning for each pill */
+.lang-pill-1 { top: 0; left: 10%; }
+.lang-pill-2 { top: 20%; left: 70%; }
+.lang-pill-3 { top: 50%; left: 0%; }
+.lang-pill-4 { top: 80%; left: 25%; }
+.lang-pill-5 { top: 5%; left: 40%; }
+.lang-pill-6 { top: 75%; left: 80%; }
+.lang-pill-7 { top: 40%; left: 50%; }
+
+
+.fw-pill-1 { top: 15%; left: 25%; }
+.fw-pill-2 { top: 60%; left: 60%; }
+.fw-pill-3 { top: -5%; left: 80%; }
+.fw-pill-4 { top: 90%; left: 5%; }
+.fw-pill-5 { top: 35%; left: 85%; }
+.fw-pill-6 { top: 65%; left: 30%; }
+
+
+.tools-section {
+    margin-top: 6rem;
+}
+
+.tools-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tool-card {
+    background-color: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tool-icon {
+    font-size: 3rem;
+    color: #333;
+}
+
+.tool-name {
+    font-weight: 500;
+    color: #555;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stack-title {
+        font-size: 2.5rem;
+    }
+    .skills-blob {
+        padding: 2rem;
+    }
+    .skills-inner {
+        padding: 1.5rem;
+    }
+    .skills-grid {
+        height: auto;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .skill-pill {
+        position: static;
+        transform: none;
+    }
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .stack-title {
+        font-size: 2rem;
+    }
+    .skills-blob {
+        border-radius: 30px;
+        animation: none;
+        padding: 1.5rem;
+    }
+    .skills-inner {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+    .tools-title {
+        font-size: 2rem;
+    }
+}

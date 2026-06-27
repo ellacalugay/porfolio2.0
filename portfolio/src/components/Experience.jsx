@@ -7,7 +7,6 @@ function Experience() {
       description:
         "Building modern WordPress sites using Elementor, focused on security, speed optimization and custom integrations."
     },
-
     {
       date: "July 2024 - September 2024",
       company: "Catalina Security Agency",
@@ -22,18 +21,25 @@ function Experience() {
       <div className="container">
 
         <h2 className="experience-title">
-          WORK EXPERIENCE
+          WORK  EXPERIENCE
         </h2>
 
         <div className="timeline">
 
+          {/* Vertical Line */}
+          <div className="timeline-line"></div>
+
           {experience.map((item, index) => (
             <div
-              className={`timeline-item ${
+              key={index}
+              className={`timeline-row ${
                 index % 2 === 0 ? "left" : "right"
               }`}
-              key={index}
             >
+              {/* Timeline Dot */}
+              <div className="timeline-dot"></div>
+
+              {/* Content */}
               <div className="timeline-content">
                 <small>{item.date}</small>
 

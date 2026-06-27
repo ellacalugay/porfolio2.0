@@ -2,8 +2,8 @@ import ScrollProgress from "./components/ScrollProgress";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Stack from "./components/Stack";
 import Experience from "./components/Experience";
+import Stack from "./components/Stack";
 import Projects from "./components/Projects";
 import Expertise from "./components/Expertise";
 import Contact from "./components/Contact";
@@ -18,8 +18,8 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Stack />
       <Experience />
+      <Stack />
       <Projects />
       <Expertise />
       <Contact />

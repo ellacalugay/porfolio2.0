@@ -1,0 +1,53 @@
+.projects-section {
+  background-color: #EDD3D6 ;
+  padding: 100px 8%;
+  font-family: 'Inter', sans-serif;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects-header .badge {
+  border-color: var(--pink-dark, #FF4F72);
+  color: var(--pink-dark, #FF4F72);
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.projects-header .section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  margin-top: 10px;
+  font-weight: 700;
+
+  background: linear-gradient(
+    90deg,
+    #5b001a 0%,
+    #fd245a 40%,
+    #ff4f72 70%,
+    #ff8cab 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

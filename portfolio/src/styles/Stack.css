@@ -1,3 +1,28 @@
+/* CSS Variables for Icon Colors */
+:root {
+  --color-html: #F59E0B;
+  --color-css: #3B82F6;
+  --color-python: #16A34A;
+  --color-javascript: #F97316;
+  --color-php: #3B82F6;
+  --color-sql: #6B7280;
+  --color-c-plus-plus: #6B7280;
+  --color-react: #A855F7;
+  --color-supabase: #10B981;
+  --color-tailwind: #06B6D4;
+  --color-git: #EF4444;
+  --color-arduino: #14B8A6;
+
+  /* Tool Icon Colors */
+  --color-figma: #000000; /* As requested to be black */
+  --color-vs-code: #007ACC;
+  --color-vercel: #000000;
+  --color-github: #181717;
+  --color-notion: #000000;
+  --color-wordpress: #21759B;
+  --color-shopify: #96BF48;
+}
+
 .stack-section {
     background-color: #fcfaf7;
     padding: 6rem 1rem;
@@ -17,62 +42,58 @@
 .stack-badge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    border: 1px solid #f472b6;
+    border: 1px solid #FB6D8B;
     border-radius: 9999px;
     font-size: 0.75rem;
     font-weight: 500;
-    color: #f472b6;
+    color: #FF3D66;
     margin-bottom: 1rem;
     letter-spacing: 0.05em;
 }
 
 .stack-title {
-    font-family: 'Fredoka', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
     font-size: 3rem;
     font-weight: 600;
-    color: #333;
+    color: #1b1c1c1;
     margin: 0;
 }
 
 .stack-title .text-pink {
-    color: #f472b6;
+    color: #FF2E63;
 }
 
 .skills-blob {
     position: relative;
-    background-color: #fce7f3;
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    padding: 4rem;
+    background-color: #fce7f3; /* light pink background */
+    border-radius: 36px; /* fixed rounded rectangle */
+    padding: 60px; /* generous padding */
     margin: 4rem auto;
-    animation: morph 8s ease-in-out infinite;
-}
-
-@keyframes morph {
-    0% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
-    50% {
-        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-    }
-    100% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    }
+    max-width: 1100px; /* max-width of 1100px */
 }
 
 .skills-inner {
-    border: 2px dashed #f472b6;
-    border-radius: 50px;
-    padding: 3rem;
-    height: 100%;
+    border: 2px dashed #f472b6; /* dashed pink border */
+    border-radius: inherit; /* inherit from parent */
+    padding: 30px; /* generous padding */
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .skills-grid {
-    position: relative;
-    height: 300px; 
+    position: static; /* Remove relative positioning */
+    height: auto; /* Allow height to adjust naturally */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .skill-pill {
-    position: absolute;
+    position: static; /* Remove absolute positioning */
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -95,23 +116,31 @@
     font-size: 1.5rem;
 }
 
-/* Positioning for each pill */
-.lang-pill-1 { top: 0; left: 10%; }
-.lang-pill-2 { top: 20%; left: 70%; }
-.lang-pill-3 { top: 50%; left: 0%; }
-.lang-pill-4 { top: 80%; left: 25%; }
-.lang-pill-5 { top: 5%; left: 40%; }
-.lang-pill-6 { top: 75%; left: 80%; }
-.lang-pill-7 { top: 40%; left: 50%; }
+.skill-icon svg {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, color 0.3s ease;
+    color: #333; /* Default color for grayscale */
+}
+
+.skill-pill:hover .skill-icon svg {
+    filter: grayscale(0%);
+}
+
+.skill-html:hover .skill-icon svg { color: var(--color-html); }
+.skill-css:hover .skill-icon svg { color: var(--color-css); }
+.skill-python:hover .skill-icon svg { color: var(--color-python); }
+.skill-javascript:hover .skill-icon svg { color: var(--color-javascript); }
+.skill-php:hover .skill-icon svg { color: var(--color-php); }
+.skill-sql:hover .skill-icon svg { color: var(--color-sql); }
+.skill-c-plus-plus:hover .skill-icon svg { color: var(--color-c-plus-plus); }
+.skill-react:hover .skill-icon svg { color: var(--color-react); }
+.skill-supabase:hover .skill-icon svg { color: var(--color-supabase); }
+.skill-tailwind:hover .skill-icon svg { color: var(--color-tailwind); }
+.skill-git:hover .skill-icon svg { color: var(--color-git); }
+.skill-arduino:hover .skill-icon svg { color: var(--color-arduino); }
 
 
-.fw-pill-1 { top: 15%; left: 25%; }
-.fw-pill-2 { top: 60%; left: 60%; }
-.fw-pill-3 { top: -5%; left: 80%; }
-.fw-pill-4 { top: 90%; left: 5%; }
-.fw-pill-5 { top: 35%; left: 85%; }
-.fw-pill-6 { top: 65%; left: 30%; }
-
+/* Positioning for each pill (removed as they are no longer absolutely positioned) */
 
 .tools-section {
     margin-top: 6rem;
@@ -121,7 +150,7 @@
     font-family: 'Fredoka', sans-serif;
     font-size: 2.5rem;
     font-weight: 600;
-    color: #333;
+    color: #1b1c1c;
     margin-bottom: 3rem;
 }
 
@@ -129,7 +158,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 2rem;
-    max-width: 800px;
+    max-width: 1100px; /* Increased width */
     margin: 0 auto;
 }
 
@@ -153,8 +182,17 @@
 
 .tool-icon {
     font-size: 3rem;
-    color: #333;
+    color: #333; /* Default color, to be overridden */
 }
+
+/* Specific tool icon colors */
+.tool-figma .tool-icon svg { color: var(--color-figma); }
+.tool-vs-code .tool-icon { color: var(--color-vs-code); } /* Apply to parent div for text */
+.tool-vercel .tool-icon svg { color: var(--color-vercel); }
+.tool-github .tool-icon svg { color: var(--color-github); }
+.tool-notion .tool-icon svg { color: var(--color-notion); }
+.tool-wordpress .tool-icon svg { color: var(--color-wordpress); }
+.tool-shopify .tool-icon svg { color: var(--color-shopify); }
 
 .tool-name {
     font-weight: 500;
@@ -187,6 +225,7 @@
     }
     .tools-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        max-width: 100%; /* Adjust for smaller screens */
     }
 }
 

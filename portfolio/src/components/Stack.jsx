@@ -20,21 +20,24 @@ import {
   SiArduino,
 } from "react-icons/si";
 
-import "../styles/globals.css";
+import "../styles/Stack.css";
 
-const skills = [
-  { name: "HTML", icon: <FaHtml5 color="#F59E0B" /> },
-  { name: "CSS", icon: <FaCss3Alt color="#3B82F6" /> },
-  { name: "Python", icon: <FaPython color="#16A34A" /> },
-  { name: "JavaScript", icon: <FaJs color="#F97316" /> },
-  { name: "PHP", icon: <FaPhp color="#3B82F6" /> },
-  { name: "React", icon: <FaReact color="#A855F7" /> },
-  { name: "Supabase", icon: <SiSupabase color="#10B981" /> },
-  { name: "Tailwind", icon: <SiTailwindcss color="#06B6D4" /> },
-  { name: "Git", icon: <FaGitAlt color="#EF4444" /> },
-  { name: "SQL", icon: <FaGithub color="#6B7280" /> },
-  { name: "C++", icon: <FaGithub color="#6B7280" /> },
-  { name: "Arduino", icon: <SiArduino color="#14B8A6" /> },
+const languages = [
+    { name: "HTML", icon: <FaHtml5 /> },
+    { name: "CSS", icon: <FaCss3Alt /> },
+    { name: "Python", icon: <FaPython /> },
+    { name: "JavaScript", icon: <FaJs /> },
+    { name: "PHP", icon: <FaPhp /> },
+    { name: "SQL", icon: <FaGithub /> },
+    { name: "C++", icon: <FaGithub /> },
+]
+
+const frameworks = [
+    { name: "React", icon: <FaReact /> },
+    { name: "Supabase", icon: <SiSupabase /> },
+    { name: "Tailwind", icon: <SiTailwindcss /> },
+    { name: "Git", icon: <FaGitAlt /> },
+    { name: "Arduino", icon: <SiArduino /> },
 ];
 
 const tools = [
@@ -49,53 +52,48 @@ const tools = [
 
 export default function Stack() {
   return (
-    <section className="stack" id="stack">
+    <section className="stack-section" id="stack">
+      <div className="stack-container">
+        <header className="stack-header">
+          <div className="stack-badge">
+            TECHNICAL STACK
+          </div>
+          <h2 className="stack-title">
+            Languages & <span className="text-pink">frameworks</span>
+          </h2>
+        </header>
 
-      <div className="stack-tag">
-        TECHNICAL STACK
-      </div>
-
-      <h2 className="stack-title">
-        Languages & <span>frameworks</span>
-      </h2>
-
-      {/* Pink Background */}
-      <div className="skills-wrapper">
-
-        {/* Dashed Box */}
-        <div className="skills-box">
-
-          {skills.map((skill) => (
-            <div className="skill-pill" key={skill.name}>
-              {skill.icon}
-              <span>{skill.name}</span>
+        <div className="skills-blob">
+          <div className="skills-inner">
+            <div className="skills-grid">
+              {languages.map((skill) => (
+                <div className={`skill-pill skill-${skill.name.toLowerCase()}`} key={skill.name}>
+                  <div className="skill-icon">{skill.icon}</div>
+                  <span>{skill.name}</span>
+                </div>
+              ))}
+              {frameworks.map((skill) => (
+                <div className={`skill-pill skill-${skill.name.toLowerCase()}`} key={skill.name}>
+                  <div className="skill-icon">{skill.icon}</div>
+                  <span>{skill.name}</span>
+                </div>
+              ))}
             </div>
-          ))}
-
+          </div>
         </div>
 
-      </div>
-
-      <h3 className="tools-title">
-        Tools I use
-      </h3>
-
-      <div className="tools-grid">
-
-        {tools.map((tool) => (
-          <div className="tool-card" key={tool.name}>
-
-            <div className="tool-icon">
-              {tool.icon}
-            </div>
-
-            <p>{tool.name}</p>
-
+        <div className="tools-section">
+          <h3 className="tools-title">Tools I Work With</h3>
+          <div className="tools-grid">
+            {tools.map((tool) => (
+              <div className={`tool-card tool-${tool.name.toLowerCase().replace(/\s/g, '-')}`} key={tool.name}>
+                <div className="tool-icon">{tool.icon}</div>
+                <p className="tool-name">{tool.name}</p>
+              </div>
+            ))}
           </div>
-        ))}
-
+        </div>
       </div>
-
     </section>
   );
 }

@@ -121,6 +121,7 @@ const projectsData = [
 function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleOpenModal = (project) => {
     setSelectedProject(project);
@@ -132,22 +133,64 @@ function Projects() {
     setSelectedProject(null);
   };
 
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + projectsData.length) % projectsData.length
+    );
+  };
+
+  const getVisibleProjects = () => {
+    const visibleProjects = [];
+    for (let i = -1; i <= 1; i++) {
+      const index = (currentIndex + i + projectsData.length) % projectsData.length;
+      visibleProjects.push({ ...projectsData[index], originalIndex: index });
+    }
+    return visibleProjects;
+  };
+
   return (
     <section id="projects" className="projects-section">
-      <div className="container">
-        <div className="projects-header">
-          <span className="badge">FEATURED PROJECTS</span>
-          <h2 className="section-title">DIGITAL ARTIFACTS</h2>
+      <div className="projects-header">
+        <span className="badge">FEATURED PROJECTS</span>
+        <h2 className="section-title">DIGITAL ARTIFACTS</h2>
+      </div>
+      <div className="projects-carousel">
+        <div className="arrow-container prev-arrow-desktop">
+          <button className="arrow" onClick={handlePrev}>
+            &#8249;
+          </button>
         </div>
         <div className="projects-grid">
-          {projectsData.map((project, index) => (
-            <ProjectCard
-              key={index}
-              project={project}
-              onClick={() => handleOpenModal(project)}
-            />
+          {getVisibleProjects().map((project, i) => (
+            <div
+              key={project.originalIndex}
+              className={`project-wrapper ${i === 1 ? "active" : "mobile-hidden"}`}
+            >
+              <ProjectCard
+                project={project}
+                onClick={() => handleOpenModal(project)}
+                isActive={i === 1}
+              />
+            </div>
           ))}
         </div>
+        <div className="arrow-container next-arrow-desktop">
+          <button className="arrow" onClick={handleNext}>
+            &#8250;
+          </button>
+        </div>
+      </div>
+      <div className="arrow-container-mobile">
+        <button className="arrow" onClick={handlePrev}>
+          &#8249;
+        </button>
+        <button className="arrow" onClick={handleNext}>
+          &#8250;
+        </button>
       </div>
       {isModalOpen && (
         <ProjectModal project={selectedProject} onClose={handleCloseModal} />

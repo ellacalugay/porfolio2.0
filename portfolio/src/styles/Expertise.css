@@ -1,0 +1,113 @@
+/* Expertise Section General Styles */
+.expertise-subtitle {
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: #555;
+  line-height: 1.7;
+  font-family: "Inter", sans-serif;
+  text-align: left;
+}
+
+/* Credibility Badges */
+.credibility-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--pink-soft, #FFD0DE);
+  color: var(--pink-dark, #FF4F72);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid var(--pink-light, #FFB0C2);
+  font-family: "Inter", sans-serif;
+}
+
+.badge-item svg {
+  font-size: 16px;
+}
+
+/* Expertise Card Enhancements */
+.expertise-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2.5rem 2rem;
+}
+
+.expertise-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(255, 79, 114, 0.15);
+  border-color: var(--pink-main, #FF4F72);
+}
+
+.expertise-icon {
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+  color: var(--pink-dark, #FF4F72);
+}
+
+.expertise-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.divider {
+  height: 2px;
+  width: 40px;
+  background-color: var(--pink-main, #FF4F72);
+  margin: 0 0 1.5rem 0;
+}
+
+.expertise-card p {
+  color: #666;
+  margin-bottom: 2rem;
+  min-height: 90px;
+  font-family: "Inter", sans-serif;
+}
+
+.expertise-card ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+
+.expertise-card ul li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+.expertise-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--pink-main, #FF4F72);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .credibility-badges {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .badge-item {
+    font-size: 13px;
+    padding: 0.5rem 1rem;
+  }
+  .expertise-card p {
+    min-height: unset;
+  }
+}

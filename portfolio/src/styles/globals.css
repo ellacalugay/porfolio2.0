@@ -471,8 +471,20 @@ img {
 
 .expertise-heading {
   font-size: 58px;
-  font-family: "Fredoka";
+  font-family: "Playfair Display";
   margin-bottom: 15px;
+
+  background: linear-gradient(
+    90deg,
+    #ff7aa2 0%,
+    #ff4f87 50%,
+    #ff2d6f 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .expertise-heading span {
@@ -483,8 +495,8 @@ img {
   max-width: 650px;
   color: #555;
   margin-bottom: 50px;
+  text-align: justify;
 }
-
 .expertise-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);

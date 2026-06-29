@@ -101,11 +101,11 @@
 }
 
 .typewriter-container {
-  min-height: 10.5rem; /* Accommodate two lines */
-  width: 40rem; 
+  min-height: 11.5rem; /* Accommodate two lines with extra space */
+  width: 40rem;
   text-align: left;
   white-space: pre-wrap; /* Handle newline characters */
-}
+  }
 
 
 .tech-badges {

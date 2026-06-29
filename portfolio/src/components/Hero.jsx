@@ -18,22 +18,25 @@ function Hero() {
     <section id="hero" className="hero">
       <div className="hero-content">
         <div className="hero-left">
+
+
           <span className="hero-small">Available for New Projects</span>
 
           <h1 className="typewriter-container">
             <TypeAnimation
               sequence={[
-                "Front-End Developer",
-                1000,
-                "WordPress Developer",
-                1000,
-                "UI/UX Designer",
-                1000,
-                "React Developer",
-                1000,
+                "Front-End\nDeveloper",
+                2000,
+                "WordPress\nDeveloper",
+                2000,
+                "UI/UX\nDesigner",
+                2000,
+                "React\nDeveloper",
+                2000,
               ]}
               wrapper="span"
               speed={50}
+              cursor={true}
               repeat={Infinity}
             />
           </h1>
@@ -52,25 +55,11 @@ function Hero() {
               <button className="btn outline-btn">CONTACT ME</button>
             </a>
           </div>
-          <div className="tech-badges">
-            <div className="tech-badge">
-              <FaReact /> React
-            </div>
-            <div className="tech-badge">
-              <FaWordpress /> WordPress
-            </div>
-            <div className="tech-badge">
-              <SiElementor /> Elementor
-            </div>
-            <div className="tech-badge">
-              <FaJsSquare /> JavaScript
-            </div>
-            <div className="tech-badge">
-              <FaCss3Alt /> CSS
-            </div>
-            <div className="tech-badge">
-              <FaFigma /> Figma
-            </div>
+        </div>
+
+        <div className="hero-right">
+          <div className="hero-image">
+            <img src={pic} alt="" />
           </div>
           <div className="hero-socials">
             <a
@@ -90,12 +79,6 @@ function Hero() {
             <a href="mailto:">
               <MdEmail />
             </a>
-          </div>
-        </div>
-
-        <div className="hero-right">
-          <div className="hero-image">
-            <img src={pic} alt="" />
           </div>
         </div>
       </div>

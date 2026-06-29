@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fredoka:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
 
 :root {
@@ -128,13 +129,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 
 .hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .hero-small {
@@ -144,11 +146,16 @@ img {
 }
 
 .hero h1 {
-  font-family: "Fredoka";
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
   font-size: 88px;
   line-height: .95;
-  margin: 20px 0;
-  color: var(--pink-dark);
+  margin: 20px 0 25px 0;
+  background: linear-gradient(to right, #F97794, #FF4F72, #D946EF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 15px rgba(255, 79, 114, 0.5), 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero p {

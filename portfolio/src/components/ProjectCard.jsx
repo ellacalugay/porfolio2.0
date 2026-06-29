@@ -11,6 +11,7 @@ const ProjectCard = ({ project, onClick }) => {
         </div>
       </div>
       <div className="project-content">
+
         <span className="project-category">{project.category}</span>
         <h3 className="project-title">{project.title}</h3>
         <p className="project-description">{project.description}</p>
